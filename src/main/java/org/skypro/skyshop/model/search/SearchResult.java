@@ -22,9 +22,11 @@ public class SearchResult {
     public String getId(){
         return this.id;
     }
+
     public String getName(){
         return this.name;
     }
+
     public String getContentType(){
         return this.contentType;
     }
