@@ -10,6 +10,5 @@ public interface Searchable {
     default String getStringRepresentation(){
         return this.getSearchTerm() + " - " + this.getContentType();
     }
-
 }
 

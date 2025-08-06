@@ -62,4 +62,5 @@ public class StorageService {
     public Collection<Article> getArticles() {
         return storageArticle.values();
     }
+
 }

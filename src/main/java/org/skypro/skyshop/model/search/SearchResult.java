@@ -30,5 +30,4 @@ public class SearchResult {
     public String getContentType(){
         return this.contentType;
     }
-
 }

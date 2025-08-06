@@ -20,5 +20,4 @@ public class SearchService extends StorageService {
                 .collect(Collectors.toList());
     }
 
-
 }

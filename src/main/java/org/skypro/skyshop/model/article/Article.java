@@ -54,4 +54,5 @@ public class Article implements Searchable {
     public int hashCode() {
         return Objects.hash(articleTitle);
     }
+
 }
