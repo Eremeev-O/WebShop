@@ -18,6 +18,7 @@ public class SearchResult {
     public String toString() {
         return this.id + " : " + this.name + "  " + this.contentType;
     }
+
     public String getId(){
         return this.id;
     }
