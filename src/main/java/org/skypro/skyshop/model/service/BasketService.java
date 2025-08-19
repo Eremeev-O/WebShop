@@ -23,13 +23,13 @@ public class BasketService {
         if (storageService.getProductById(id).isPresent()) {
             productBasket.addProdictToBasket(id);
         } else {
-            throw new IllegalArgumentException();
+            throw new NoSuchProductException();
         }
     }
     public UserBasket getUserBasket(){
         Map<UUID, Integer> basketUser = this.productBasket.getProductBasket();
         List<BasketItem> basketItemList = basketUser.entrySet().stream()
-                .map(map -> new BasketItem(storageService.getProductById(map.getKey()).orElseThrow(), map.getValue()))
+                .map(map -> new BasketItem(storageService.getProductById(map.getKey()).orElseThrow(), map.getValue())                )
                 .collect(Collectors.toCollection(ArrayList::new));
         return new UserBasket(basketItemList);
     }
