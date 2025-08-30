@@ -50,8 +50,8 @@ public class StorageService {
     }
     public Set<Searchable> generalCollection(){
         Set<Searchable> searchable = new HashSet<>();
-        searchable.addAll(storageProduct.values());
-        searchable.addAll(storageArticle.values());
+        searchable.addAll(getProducts());
+        searchable.addAll(getArticles());
         return searchable;
     }
 
@@ -66,4 +66,5 @@ public class StorageService {
     public Collection<Article> getArticles() {
         return storageArticle.values();
     }
+
 }

@@ -11,6 +11,6 @@ public class ShopControllerAdvice {
 
     @ExceptionHandler(NoSuchProductException.class)
     public ResponseEntity<String> NoSuchProductHandler (NoSuchProductException e) {
-        return ResponseEntity.badRequest().body(new ShopError("Код 404", "Продукт не найден").toString());
+        return ResponseEntity.status(404).body(new ShopError("Код 404", "Продукт не найден").toString());
     }
 }
